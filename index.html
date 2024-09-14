@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal website of Suki Mizuhik">
+    <title>Suki Mizuhik - Present Yourself</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <section class="hero">
+            <h1>Hi, I'm Suki Mizuhik</h1>
+            <p>Welcome to my personal space on the web</p>
+            <a href="#about" class="btn">Know More</a>
+        </section>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello, I'm Suki Mizuhik, a [Your Profession/Title] with a passion for [Your Passion/Hobbies]. I love creating meaningful work and connecting with people through [specialization].</p>
+            <div class="social-links">
+                <a href="https://github.com/yourgithub" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <h2>My Work</h2>
+            <div class="gallery">
+                <div class="project-card">
+                    <img src="assets/project1.jpg" alt="Project 1">
+                    <h3>Project Title 1</h3>
+                    <p>Brief description of project.</p>
+                </div>
+                <!-- Add more project cards as necessary -->
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skill">
+                <h3>HTML5</h3>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>CSS3</h3>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 85%"></div>
+                </div>
+            </div>
+            <!-- Add more skills as needed -->
+        </section>
+
+        <section id="testimonials">
+            <h2>Testimonials</h2>
+            <blockquote>
+                <p>"Suki is a brilliant and reliable professional!"</p>
+                <cite>- John Doe, CEO of Company X</cite>
+            </blockquote>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form id="contact-form" action="submit.php" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Suki Mizuhik. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
