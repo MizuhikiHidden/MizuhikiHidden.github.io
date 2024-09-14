@@ -1,41 +1,48 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General styles */
 body {
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background: #f4f4f4;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+body.dark-mode {
+    background-color: #222;
+    color: #eee;
 }
 
 header {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
+    background: linear-gradient(to right, #333, #555);
+    padding: 20px;
     text-align: center;
 }
 
 nav ul {
+    display: flex;
+    justify-content: center;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
 }
 
+nav ul li a:hover {
+    color: #f00;
+}
+
+/* Hero Section */
 .hero {
-    background-image: url('assets/hero-bg.jpg');
     height: 100vh;
+    background-image: url('assets/hero-bg.jpg');
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,49 +52,96 @@ nav ul li a {
 
 .hero h1 {
     font-size: 4em;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .btn {
-    background: #f00;
+    background-color: #ff5555;
     color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
+    padding: 15px 30px;
+    border: none;
     border-radius: 5px;
-    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-#about, #portfolio, #skills, #contact {
-    padding: 50px 0;
+.btn:hover {
+    background-color: #ff3333;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 30px;
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.gallery {
+/* Skills Section with Circular Progress Bars */
+.skills-container {
     display: flex;
     justify-content: space-around;
+    padding: 50px;
 }
 
-.project-card {
-    width: 30%;
-    padding: 10px;
-}
-
-.skill-bar {
-    width: 100%;
-    background: #ddd;
-}
-
-.skill-level {
-    height: 20px;
-    background: #3b5998;
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    padding: 20px;
+.skill-card {
     text-align: center;
+}
+
+.circular-chart {
+    display: block;
+    margin: 10px auto;
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.circular-chart .circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
+}
+
+.circular-chart .circle {
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+}
+
+.orange .circle {
+    stroke: #ff9f00;
+}
+
+.green .circle {
+    stroke: #00c853;
+}
+
+.percentage {
+    font-size: 0.5em;
+    text-anchor: middle;
+    fill: #333;
+}
+
+body.dark-mode .percentage {
+    fill: #eee;
+}
+
+/* Dark Mode Toggle Button */
+#theme-toggle {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: #555;
+}
+
+/* Dark Mode Styles */
+body.dark-mode #theme-toggle {
+    background-color: #fff;
+    color: #333;
+}
+
+body.dark-mode header {
+    background: linear-gradient(to right, #222, #444);
 }
